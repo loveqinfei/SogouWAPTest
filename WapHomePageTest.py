@@ -258,8 +258,8 @@ class WapHomePageTest(unittest.TestCase):
         '''各个垂搜入口测试'''
         log("Step 1：依次点击各个垂搜入口，并存储页面标题")
         #包含明医的垂搜入口
-        click_list = ['小说','微信','知乎','新闻','明医','图片','视频','地图','网址']
-        result_list = ['首页','微信','知乎','新闻','明医','图片','影视','地图','网址']
+        click_list = ['小说','微信','知乎','新闻','明医','英文','学术','图片','视频','地图','网址']
+        result_list = ['首页','微信','知乎','新闻','明医','英文','学术','图片','影视','地图','网址']
         #旧版垂搜入口
         #click_list = ['小说', '微信', '知乎', '新闻', '应用', '本地', '图片', '视频', '地图', '问问', '百科', '购物', '音乐', '寻人', '网址']
         #result_list = ['首页', '微信', '知乎', '新闻', '应用', '本地生活', '图片', '影视', '地图', '问问', '百科', '首页', '音乐', '寻人', '网址']
@@ -271,8 +271,8 @@ class WapHomePageTest(unittest.TestCase):
         #result_list = ['首页', '微信', '知乎', '新闻','图片', '应用', '影视', '地图', '网址']
         temp_list = []
         for i in click_list:
-            if int(click_list.index(i)) > 4:
-                item_click(self, waitfor(self, 'linktext', '更多'))
+            #if int(click_list.index(i)) > 4:
+                #item_click(self, waitfor(self, 'linktext', '更多'))
             item_click(self, waitfor(self, 'linktext', i))
             sleep(1)
             title = self.driver.title
