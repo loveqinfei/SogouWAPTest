@@ -249,10 +249,11 @@ class WapHomePageTest(unittest.TestCase):
         item_click(self, waitfor(self, 'id', 'pan_sogou_mic_con'))
         log("Step 2：点击立即体验按钮")
         item_click(self, waitfor(self, 'id', 'pan_sogou_butn2'))
-        item = item_text(self, waitfor(self, 'id', 'id-pkg-size'))
-        log("Step 3：判断是否到了下载页："+item)
+        sleep(1)
+        item = self.driver.title
+        log("Step 3：获取页面标题："+item)
         log("Step 4：比较预期结果和实际结果")
-        self.assertIn(u'安装包大小', item)
+        self.assertIn(u'搜狗搜索APP', item)
         log("搜狗搜索推广测试结果：True")
     def test15(self):
         '''各个垂搜入口测试'''
