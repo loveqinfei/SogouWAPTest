@@ -221,7 +221,7 @@ class WapHomePageTest(unittest.TestCase):
         '''历史记录点击清除历史按钮测试'''
         log("Step 1：调用搜索函数，产生一条搜索记录")
         sousuo(self)
-        sleep(1)
+        sleep(2)
         item_click(self, waitfor(self, 'id', 'keyword'))
         log("Step 2：点击清除历史按钮")
         item_click(self, waitfor(self, 'linktext', '清除历史'))
@@ -249,7 +249,7 @@ class WapHomePageTest(unittest.TestCase):
         item_click(self, waitfor(self, 'id', 'pan_sogou_mic_con'))
         log("Step 2：点击立即体验按钮")
         item_click(self, waitfor(self, 'id', 'pan_sogou_butn2'))
-        sleep(1)
+        sleep(3)
         item = self.driver.title
         log("Step 3：获取页面标题："+item)
         log("Step 4：比较预期结果和实际结果")
